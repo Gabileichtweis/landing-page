@@ -1,26 +1,33 @@
+import { Grid, Typography } from '@mui/material';
+import { Container } from '@mui/material';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import Image from './images/Image.png';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            
+            <Navbar/>
+            <Container>
+                <Grid container sx={{height: '90vh'}}>
+            
+                    <Grid item xs={12} sm={4}>
+                        <Typography variant='h2'>Data Science</Typography>
+
+                    </Grid>
+
+                    <Grid item xs={12} sm={8}>
+                        <img src={Image} style={{width: '200px'}} />
+
+                    </Grid>
+            
+                </Grid>
+            </Container>
+
+            
+        </>
+    );
 }
 
 export default App;
